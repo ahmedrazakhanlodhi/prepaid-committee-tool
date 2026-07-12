@@ -1,0 +1,694 @@
+{
+"2022": {
+"AK": {
+"established": "1991.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "",
+"inv_return": ""
+},
+"FL": {
+"established": "1988.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "6.00% - 6.75%",
+"inv_return": "0.0371"
+},
+"MA": {
+"established": "1995.0",
+"full_faith": "Yes",
+"tax": "Yes ($1K single/$2K married filing jointly tax deduction for MA plan contributions only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "N/A",
+"inv_return": "N/A"
+},
+"MD": {
+"established": "1998.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes (in state only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "3% for next 3 years, then 5% for next 5 years",
+"inv_return": "0.06"
+},
+"MI-I": {
+"established": "1988.0",
+"full_faith": "No",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.045",
+"inv_return": "B&C 1.2%  D 5.5%"
+},
+"MI-II": {
+"established": "1988.0",
+"full_faith": "No",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.045",
+"inv_return": "B&C 1.2%  D 5.5%"
+},
+"MS": {
+"established": "2014 - Horizon",
+"full_faith": "Yes",
+"tax": "Yes (All contributions to MPACT qualify for a MS tax deduction)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.05",
+"inv_return": "5.75"
+},
+"NV": {
+"established": "1997.0",
+"full_faith": "No",
+"tax": "No¹",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "2023/24: 2.5%; 2024/25:1.9%; 2025/26:2.7% thereafter 4.0% for university and 3.5% for community college",
+"inv_return": "0.05"
+},
+"PA": {
+"established": "1993.0",
+"full_faith": "No",
+"tax": "Yes ($15K – in state plan residents only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "3.00% - 5.25%",
+"inv_return": "0.055"
+},
+"TX-II": {
+"established": "2008.0",
+"full_faith": "No",
+"tax": "No¹ (TX public colleges must accept amt paid by plan as PIF for hrs covered)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.063",
+"inv_return": "0.059"
+},
+"VA": {
+"established": "1996.0",
+"full_faith": "No (sum sufficient appropriation)",
+"tax": "Yes ($4,000 in state only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "4.0% through 2025, 6.0% thereafter",
+"inv_return": "0.055"
+},
+"WA": {
+"established": "1998.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "2.7% through 2025, 4.0% thereafter",
+"inv_return": "0.0475"
+},
+"US": {
+"established": "2003.0",
+"full_faith": "Yes",
+"tax": "Eligible in Tax Parity States",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "N/A",
+"inv_return": ""
+},
+"AL": {
+"established": "1989.0",
+"full_faith": "No",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "N/A",
+"inv_return": "N/A"
+},
+"IL": {
+"established": "1998.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes ($10K/$20K – in-state residents only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.0425",
+"inv_return": "5.0% for FY23 declining to 3.0% thereafter"
+},
+"KY": {
+"established": "2000.0",
+"full_faith": "Yes",
+"tax": "No",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.0425",
+"inv_return": "0.015"
+},
+"OH": {
+"established": "1989.0",
+"full_faith": "Yes",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.04",
+"inv_return": "0.032"
+},
+"SC": {
+"established": "1997.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.055",
+"inv_return": "0.0373"
+},
+"TX-I": {
+"established": "1996.0",
+"full_faith": "No",
+"tax": "No",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.063",
+"inv_return": "0.023"
+}
+},
+"2023": {
+"AK": {
+"established": "1991.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.0",
+"inv_return": "0.0619"
+},
+"FL": {
+"established": "1988.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "6.00% - 6.75%",
+"inv_return": "0.0447"
+},
+"MA": {
+"established": "1995.0",
+"full_faith": "Yes",
+"tax": "Yes ($1K single/$2K married filing jointly tax deduction for MA plan contributions only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "n/a",
+"inv_return": ""
+},
+"MI-I": {
+"established": "1988.0",
+"full_faith": "No",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "MET I: 4.5% MET II: 4.5%",
+"inv_return": "MET I: 3.65% MET II: 5.5%"
+},
+"MI-II": {
+"established": "1988.0",
+"full_faith": "No",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "MET I: 4.5% MET II: 4.5%",
+"inv_return": "MET I: 3.65% MET II: 5.5%"
+},
+"MS": {
+"established": "2014 - Horizon",
+"full_faith": "Yes",
+"tax": "Yes (All contributions to MPACT qualify for a MS tax deduction)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.05",
+"inv_return": "0.0575"
+},
+"NV": {
+"established": "1997.0",
+"full_faith": "No",
+"tax": "No¹",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "24-25: 1.9% 25-26: 2.7% 26-27: 5.2% 27-28+: 4.0%",
+"inv_return": "0.0525"
+},
+"PA": {
+"established": "1993.0",
+"full_faith": "No",
+"tax": "Yes ($17K – in state plan residents only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "3.00% - 5.25%",
+"inv_return": "0.055"
+},
+"TX-II": {
+"established": "2008.0",
+"full_faith": "No",
+"tax": "No¹ (TX public colleges must accept amt paid by plan as PIF for hrs covered)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "Public Senior 6.3%; Public Junior 5.2%",
+"inv_return": "5.3% (Net of Fees)"
+},
+"VA": {
+"established": "1996.0",
+"full_faith": "No (sum sufficient appropriation)",
+"tax": "Yes ($4,000 in state only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "4% for universities, 3% for community college for school year 2023-2024 and 6% thereafter for both",
+"inv_return": "0.0575"
+},
+"WA": {
+"established": "1998.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "3% through 2025, 3.25% 2025-2027, 4.15% thereafter",
+"inv_return": "0.05"
+},
+"US": {
+"established": "2003.0",
+"full_faith": "Yes",
+"tax": "Eligible in Tax Parity States",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "N/A",
+"inv_return": "5.42% (avg. yearly, since inception)"
+},
+"AL": {
+"established": "1989.0",
+"full_faith": "No",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.0",
+"inv_return": "2024 4.75%  2025 4.00%  2026 3.25%  2027 2.75%  2028 2.00%"
+},
+"IL": {
+"established": "1998.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes ($10K/$20K – in-state residents only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.0425",
+"inv_return": "5.0% for FY24 declining to 3.0% thereafter"
+},
+"KY": {
+"established": "2000.0",
+"full_faith": "Yes",
+"tax": "No",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.022",
+"inv_return": "0.015"
+},
+"MD": {
+"established": "1998.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes (in state only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "3% for next 3 years, then 5% for next 5 years",
+"inv_return": "0.06"
+},
+"OH": {
+"established": "1989.0",
+"full_faith": "Yes",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.04",
+"inv_return": "0.0438"
+},
+"SC": {
+"established": "1997.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "0.055",
+"inv_return": "0.0482"
+},
+"TX-I": {
+"established": "1996.0",
+"full_faith": "No",
+"tax": "No",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "Public Senior 6.3%; Public Junior 5.2%; Private 7.3%",
+"inv_return": "0.023"
+}
+},
+"2024": {
+"AK": {
+"established": "1991.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "Credit Value",
+"min_benefits": "Value of Credits at Purchase",
+"tuition_growth": "0%%",
+"inv_return": "10.5% (1 year)"
+},
+"FL": {
+"established": "1988.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "Credits",
+"min_benefits": "Principal",
+"tuition_growth": "6.00% - 6.75%",
+"inv_return": "0.0491"
+},
+"MA": {
+"established": "1995.0",
+"full_faith": "Yes",
+"tax": "Yes ($1K single/$2K married filing jointly tax deduction for MA plan contributions only)",
+"benefit": "Tuition Certificates",
+"min_benefits": "Principal + CPI",
+"tuition_growth": "N/A",
+"inv_return": "N/A"
+},
+"MI-I": {
+"established": "1988.0",
+"full_faith": "No",
+"tax": "Yes (100% of contributions, no limit)",
+"benefit": "Credits",
+"min_benefits": "Principal",
+"tuition_growth": "MET I: 4.25% MET II: 4.25%",
+"inv_return": "MET I: 5.3% MET II: 5.5%"
+},
+"MI-II": {
+"established": "1988.0",
+"full_faith": "No",
+"tax": "Yes (100% of contributions, no limit)",
+"benefit": "Credits",
+"min_benefits": "Principal",
+"tuition_growth": "MET I: 4.25% MET II: 4.25%",
+"inv_return": "MET I: 5.3% MET II: 5.5%"
+},
+"MS": {
+"established": "2014 - Horizon",
+"full_faith": "Yes",
+"tax": "Yes (All contributions to MPACT qualify for a MS tax deduction)",
+"benefit": "Hours",
+"min_benefits": "Principal + variable interest (bank savings rate)",
+"tuition_growth": "Horizon:  Univ: 4.5% CC: 4.25% Legacy:  Univ: 4.5%  CC: 4.25%",
+"inv_return": "Horizon: 5.5% Legacy: 5.5%"
+},
+"NV": {
+"established": "1997.0",
+"full_faith": "No",
+"tax": "No¹",
+"benefit": "Credits",
+"min_benefits": "",
+"tuition_growth": "1.9% 24-25; 2.7% 25-26; 5.2% 26-27; 4.0% 27-28+",
+"inv_return": "0.0525"
+},
+"PA": {
+"established": "1993.0",
+"full_faith": "No",
+"tax": "Yes ($18K – in state plan residents only)",
+"benefit": "credits",
+"min_benefits": "N/A",
+"tuition_growth": "2.7% 25-26",
+"inv_return": "0.055"
+},
+"TX-II": {
+"established": "2008.0",
+"full_faith": "No",
+"tax": "No¹ (TX public colleges must accept amt paid by plan as PIF for hrs covered)",
+"benefit": "Units",
+"min_benefits": "TX public colleges must accept amt paid by plan as PIF for hrs. covered. Transfer Value can be used for TX private or out-of-state institutions, career schools, K-12 tuition or registered apprenticeship programs )",
+"tuition_growth": "5.2% 26-27",
+"inv_return": "10.3% for FY ended 8/31/2024"
+},
+"VA": {
+"established": "1996.0",
+"full_faith": "No (sum sufficient appropriation)",
+"tax": "Yes ($4,000 in state only)",
+"benefit": "Prepaid529 in semesters,   TTP in units   (1 yr = 100 units)",
+"min_benefits": "Prepaid529 pays tuition +mand. fees at VA in-state rates; TTP pays out WAT/fee rate regardless of institution",
+"tuition_growth": "4.0% 27-28+",
+"inv_return": "0.0575"
+},
+"WA": {
+"established": "1998.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "Units (100 units =1 year at highest priced WA public)",
+"min_benefits": "N/A",
+"tuition_growth": "0.03",
+"inv_return": "0.1115"
+},
+"US": {
+"established": "2003.0",
+"full_faith": "Yes",
+"tax": "Eligible in Tax Parity States",
+"benefit": "Tuition certificates",
+"min_benefits": "Principal + up to 2% (maximum), compunded annually.  Up to +2% based on underlying performance of trust.",
+"tuition_growth": "3.9% (median increase across all member colleges)",
+"inv_return": "0.116"
+},
+"AL": {
+"established": "1989.0",
+"full_faith": "No",
+"tax": "Yes",
+"benefit": "Hours",
+"min_benefits": "If cancelled they get amt paid in – amt paid out and any outstanding fees",
+"tuition_growth": "5.83% 1 Year Return",
+"inv_return": "5.83% 1 year return"
+},
+"IL": {
+"established": "1998.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes ($10K/$20K – in-state residents only)",
+"benefit": "Semesters/Credits",
+"min_benefits": "Refund equal to all contract payments (+ interest pre 2014; payout never less than contributions",
+"tuition_growth": "0.05",
+"inv_return": "5.0% for FY24 declining to 3.0% thereafter"
+},
+"KY": {
+"established": "2000.0",
+"full_faith": "Yes",
+"tax": "No",
+"benefit": "Credits",
+"min_benefits": "N/A",
+"tuition_growth": "0.04",
+"inv_return": "0.02"
+},
+"MD": {
+"established": "1998.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes (in state only)",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "",
+"inv_return": ""
+},
+"OH": {
+"established": "1989.0",
+"full_faith": "Yes",
+"tax": "Yes",
+"benefit": "units and credits",
+"min_benefits": "N/A",
+"tuition_growth": "0.04",
+"inv_return": "0.0464"
+},
+"SC": {
+"established": "1997.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes",
+"benefit": "Two and four-year contracts",
+"min_benefits": "Terminated contracts receive a refund of premiums paid + 2% annual interest rate",
+"tuition_growth": "0.055",
+"inv_return": "0.0503"
+},
+"TX-I": {
+"established": "1996.0",
+"full_faith": "No",
+"tax": "No",
+"benefit": "Hours",
+"min_benefits": "TX public colleges must accept amt paid by plan as PIF for hrs. covered by the plan; can be used for private and out-of-state schools",
+"tuition_growth": "5.5% for 4-year, 2-year and private schools @ 8/31/2024",
+"inv_return": "0.033"
+}
+},
+"2025": {
+"AK": {
+"established": "1991.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "Credit Value",
+"min_benefits": "Value of Credits at Purchase",
+"tuition_growth": "0.03",
+"inv_return": "0.0978"
+},
+"FL": {
+"established": "1988.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "Credits",
+"min_benefits": "Principal",
+"tuition_growth": "6.00% - 6.75%",
+"inv_return": "0.049"
+},
+"MA": {
+"established": "1995.0",
+"full_faith": "Yes",
+"tax": "Yes ($1K single/$2K married filing jointly tax deduction for MA plan contributions only)",
+"benefit": "Tuition Certificates",
+"min_benefits": "Principal + CPI",
+"tuition_growth": "N/A",
+"inv_return": "N/A"
+},
+"MI-I": {
+"established": "1988.0",
+"full_faith": "No",
+"tax": "Yes (100% of contributions, no limit)",
+"benefit": "Credits",
+"min_benefits": "Principal",
+"tuition_growth": "MET I: 4.25% MET II: 4.25%",
+"inv_return": "MET I: 5.38% MET II: 5.5%"
+},
+"MI-II": {
+"established": "1988.0",
+"full_faith": "No",
+"tax": "Yes (100% of contributions, no limit)",
+"benefit": "Credits",
+"min_benefits": "Principal",
+"tuition_growth": "MET I: 4.25% MET II: 4.25%",
+"inv_return": "MET I: 5.38% MET II: 5.5%"
+},
+"MS": {
+"established": "2014 - Horizon",
+"full_faith": "Yes",
+"tax": "Yes (All contributions to MPACT qualify for a MS tax deduction)",
+"benefit": "Hours",
+"min_benefits": "Principal + variable interest (bank savings rate)",
+"tuition_growth": "Horizon:  Univ: 4.5% CC: 4.25% Legacy:  Univ: 4.5%  CC: 4.25%",
+"inv_return": "Horizon: 5.5% Legacy: 5.5%"
+},
+"NV": {
+"established": "1997.0",
+"full_faith": "No",
+"tax": "No¹",
+"benefit": "Credits",
+"min_benefits": "N/A",
+"tuition_growth": "5.2% 26-27, 4.0% 27-28, 3.4% 28-29,4.25% 29-30 and thereafter",
+"inv_return": "0.055"
+},
+"PA": {
+"established": "1993.0",
+"full_faith": "No",
+"tax": "Yes ($19K – in state plan residents only)",
+"benefit": "credits",
+"min_benefits": "N/A",
+"tuition_growth": "2.7% 25-26",
+"inv_return": "0.055"
+},
+"TX-II": {
+"established": "2008.0",
+"full_faith": "No",
+"tax": "No¹ (TX public colleges must accept amt paid by plan as PIF for hrs covered)",
+"benefit": "Units",
+"min_benefits": "TX public colleges must accept amt paid by plan as PIF for hrs. covered. Transfer Value can be used for TX private or out-of-state institutions, career schools, K-12 tuition or registered apprenticeship programs )",
+"tuition_growth": "5.5% 26-27",
+"inv_return": "9.2% for FY ended 8/31/2025"
+},
+"VA": {
+"established": "1996.0",
+"full_faith": "No (sum sufficient appropriation)",
+"tax": "Yes ($4,000 in state only)",
+"benefit": "Prepaid529 in semesters,   TTP in units   (1 yr = 100 units)",
+"min_benefits": "Prepaid529 pays tuition +mand. fees at VA in-state rates; TTP pays out WAT/fee rate regardless of institution",
+"tuition_growth": "5.0% 27-28+",
+"inv_return": "0.06"
+},
+"WA": {
+"established": "1998.0",
+"full_faith": "Yes",
+"tax": "No¹",
+"benefit": "Units (100 units =1 year at highest priced WA public)",
+"min_benefits": "N/A",
+"tuition_growth": "0.033",
+"inv_return": "0.1131"
+},
+"US": {
+"established": "2003.0",
+"full_faith": "Yes",
+"tax": "Eligible in Tax Parity States",
+"benefit": "Tuition certificates",
+"min_benefits": "Principal + up to 2% (maximum), compunded annually.  Up to +2% based on underlying performance of trust.",
+"tuition_growth": "3.9% (median increase across all member colleges)",
+"inv_return": "0.1167"
+},
+"AL": {
+"established": "1989.0",
+"full_faith": "No",
+"tax": "Yes",
+"benefit": "Hours",
+"min_benefits": "If cancelled they get amt paid in – amt paid out and any outstanding fees",
+"tuition_growth": "0.04",
+"inv_return": "4.09% 1 year return"
+},
+"IL": {
+"established": "1998.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes ($10K/$20K – in-state residents only)",
+"benefit": "Semesters/Credits",
+"min_benefits": "Refund equal to all contract payments (+ interest pre 2014; payout never less than contributions",
+"tuition_growth": "0.05",
+"inv_return": "4.429% for FY26 declining to 3.0% by FY31"
+},
+"KY": {
+"established": "2000.0",
+"full_faith": "Yes",
+"tax": "No",
+"benefit": "Credits",
+"min_benefits": "N/A",
+"tuition_growth": "0.03",
+"inv_return": "0.043"
+},
+"MD": {
+"established": "1998.0",
+"full_faith": "",
+"tax": "",
+"benefit": "",
+"min_benefits": "",
+"tuition_growth": "",
+"inv_return": ""
+},
+"OH": {
+"established": "1989.0",
+"full_faith": "Yes",
+"tax": "Yes",
+"benefit": "units and credits",
+"min_benefits": "N/A",
+"tuition_growth": "0.04",
+"inv_return": "0.037"
+},
+"SC": {
+"established": "1997.0",
+"full_faith": "Yes (legislative)",
+"tax": "Yes",
+"benefit": "Two and four-year contracts",
+"min_benefits": "Terminated contracts receive a refund of premiums paid + 2% annual interest rate",
+"tuition_growth": "0.055",
+"inv_return": "0.0443"
+},
+"TX-I": {
+"established": "1996.0",
+"full_faith": "No",
+"tax": "No",
+"benefit": "Hours",
+"min_benefits": "TX public colleges must accept amt paid by plan as PIF for hrs. covered by the plan; can be used for private and out-of-state schools",
+"tuition_growth": "5.5% for 4-year, 2-year and private schools @ 8/31/2025",
+"inv_return": "0.029"
+}
+}
+}

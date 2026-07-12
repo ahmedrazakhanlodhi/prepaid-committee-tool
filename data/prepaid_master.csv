@@ -1,0 +1,352 @@
+plan_key,state,plan_name,established,status,reporting_year,as_of,funded,assets_m,active_accounts,accounts_since_inception,paid_out_fy_m,paid_out_inception_m,source,note,sort
+AK,AK,Alaska 529 (Prepaid),1991,Open,2005,,1.0,36.3,13322,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2006,,1.0,37.9,14126,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2007,,1.0,44.0,14720,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2008,,1.0,46.3,15948,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2009,,1.0,44.9,15943,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2010,,1.0,51.8,16089,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2011,,1.0,61.09,16616,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2012,,1.0,66.71,16997,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2013,,1.0,74.48,18976,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2014,,1.0,85.4,21770,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2015,,1.0,94.63,23330,,,,CSPN quarterly workbooks (FY05-FY15 series),,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2018,,1.0,118.0,23202,29258,13.9,,CSPN one-pager 2018,,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2020,,1.0,142.0,22513,50043,14.6,,CSPN one-pager 2020,,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2021,,1.0,166.6,25014,57992,14.8,,CSPN one-pager 2021,,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2022,6.30.22,1.0,147.6,23966,61026,17.1,,CSPN Prepaid Committee Fall 2022,,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2023,2023-06-30,,167.0,26751,63709,12.3,,CSPN Prepaid Committee Fall 2023,,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2024,N/A,,183.0,27158,65611,12.9,,CSPN Prepaid Committee Fall 2024,,1
+AK,AK,Alaska 529 (Prepaid),1991,Open,2025,N/A,,196.0,23155,65188,24.9,,CSPN Prepaid Committee Fall 2025,,1
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2005,,1.09,6494.0,741622,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2006,,1.1,6660.0,790670,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2007,,1.13,7423.0,831635,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2008,,1.1,8293.0,858111,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2009,,1.051,8702.0,876000,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2010,,1.0507,9999.0,895220,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2011,,1.06,10481.0,876088,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2012,,1.05,12124.0,575819,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2013,,1.08,11857.0,559345,,,,CSPN quarterly workbooks (FY05-FY15 series),,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2018,,1.23,15600.0,519254,1133474,405.7,4700.0,CSPN one-pager 2018,,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2020,,1.3,15300.0,525393,1181951,381.0,5500.0,CSPN one-pager 2020,,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2021,,1.4,14100.0,519102,1280762,360.0,6000.0,CSPN one-pager 2021,,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2022,6.30.22,1.4,14100.0,512172,1231195,359.0,6400.0,CSPN Prepaid Committee Fall 2022,,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2023,2023-06-30,1.51,14300.0,507206,1259631,342.0,6700.0,CSPN Prepaid Committee Fall 2023,,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2024,2024-06-30,1.53,14100.0,535791,1,287.0,7110.0,CSPN Prepaid Committee Fall 2024,,2
+FL,FL,Stanley G. Tate Florida Prepaid College Program,1988,Open,2025,2025-06-30,1.57,14800.0,502938,1,359.0,7190.0,CSPN Prepaid Committee Fall 2025,,2
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2005,,1.0,98.0,36125,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2006,,1.0,97.0,36500,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2007,,1.0,93.0,36533,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2008,,1.0,91.0,36777,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2009,,1.0,88.0,36777,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2010,,1.0,83.0,15589,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2011,,1.0,84.0,12865,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2012,,1.0,82.0,12310,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2013,,1.0,,,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2014,,1.0,88.0,10000,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2015,,1.0,88.0,8000,,,,CSPN quarterly workbooks (FY05-FY15 series),,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2018,,1.0,89.0,6534,,,,CSPN one-pager 2018,,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2020,,1.0,85.0,5822,,4.0,,CSPN one-pager 2020,,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2021,,1.0,90.0,5562,36000,,,CSPN one-pager 2021,,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2022,9.30.22,1.0,92.0,5413,,5.54,,CSPN Prepaid Committee Fall 2022,* Most Recent Fiscal Year is 7/1/22 through the present,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2023,2023-12-31,1.0,91.0,5044,44,6.0,191.0,CSPN Prepaid Committee Fall 2023,,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2024,2024-06-30,1.0,88.0,5081,44,7.1,198.0,CSPN Prepaid Committee Fall 2024,,3
+MA,MA,U.Plan Prepaid Tuition Program,1995,Open,2025,2025-06-30,1.0,85.0,4733,45,9.1,211.0,CSPN Prepaid Committee Fall 2025,,3
+MD,MD,Maryland Prepaid College Trust,1998,Open,2005,,0.95,350.0,24500,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2006,,1.03,436.0,26000,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2007,,1.14,542.0,26000,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2008,,1.09,533.0,26127,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2009,,0.92,445.0,29861,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2010,,1.0,519.0,30905,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2011,,1.17,644.0,32269,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2012,,1.17,654.0,33472,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2013,,1.25,,33960,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2014,,1.43,895.29,34228,,,,CSPN quarterly workbooks (FY05-FY15 series),,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2018,,1.55,1000.0,36686,58089,66.0,591.0,CSPN one-pager 2018,,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2020,,1.49,1000.0,33932,57837,63.0,587.0,CSPN one-pager 2020,,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2021,,1.61,1200.0,30955,62479,74.0,1300.0,CSPN one-pager 2021,,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2022,6.30.22,1.4,1100.0,27683,63631,73.6,1400.0,CSPN Prepaid Committee Fall 2022,,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2023,6.30.22,1.4,1150.0,27587,64901,45.3,1100.0,CSPN Prepaid Committee Fall 2023,As of the revision date of this document the 2023 actuarial assumptions and funded status are not yet finalized,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2024,,,,,,,,CSPN Prepaid Committee Fall 2024,Data unavailable as of the date of this report,4
+MD,MD,Maryland Prepaid College Trust,1998,Open,2025,,,,,,,,CSPN Prepaid Committee Fall 2025,Data unavailable as of the date of this report,4
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2005,,0.901,446.0,22294,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2006,,0.915,532.0,25301,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2007,,0.981,609.0,28346,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2008,,0.817,562.0,30570,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2009,,0.918,593.0,32616,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2010,,0.83,635.0,34694,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2011,,0.75,648.32,36183,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2012,,0.866,776.2,37311,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2013,,0.951,852.1,37532,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2014,,1.032,912.67,37794,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2015,,1.006,883.58,37415,,,,CSPN quarterly workbooks (FY05-FY15 series),,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2018,,1.24,1100.0,40314,112251,84.3,1800.0,CSPN one-pager 2018,MET I+II combined,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2020,,1.24,1100.0,40314,112251,84.6,1800.0,CSPN one-pager 2020,MET I+II combined,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2021,,1.525,1000.0,35029,110500,80.6,2600.0,CSPN one-pager 2021,MET I+II combined,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2022,9.30.22,1.397,963.0,31952,,77.4,,CSPN Prepaid Committee Fall 2022,MET II (Plan D),5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2023,2023-09-30,1.51,991.0,30468,65888,80.0,,CSPN Prepaid Committee Fall 2023,MET II (Plan D); All data is as of 9/30/23,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2024,2024-09-30,1.711,1060.0,28960,66833,78.0,,CSPN Prepaid Committee Fall 2024,MET II (Plan D); All data is as of 9/30/24,5
+MI-II,MI,Michigan Education Trust - MET II (Plan D),1988,Open,2025,2025-09-30,1.894,1080.0,27387,68290,86.6,,CSPN Prepaid Committee Fall 2025,MET II (Plan D),5
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2005,,0.877,161.0,17738,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2006,,0.896,185.0,18596,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2007,,0.952,224.4,19593,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2008,,0.843,217.0,20416,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2009,,0.727,184.0,21729,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2010,,0.754,211.6,21257,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2011,,0.833,261.0,21218,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2012,,0.768,248.0,22272,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2013,,0.802,295.2,21269,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2014,,0.734,327.6,20203,,,,CSPN quarterly workbooks (FY05-FY15 series),,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2018,,1.131,323.4,17320,33072,27.7,257.5,CSPN one-pager 2018,Legacy tier 69.7%,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2020,,1.131,323.4,17320,33072,27.7,257.5,CSPN one-pager 2020,Legacy tier 69.7%,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2021,,1.183,343.9,14307,34078,26.5,337.7,CSPN one-pager 2021,Legacy tier 74.5%,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2022,2022-06-30,1.439,106.3,2631,3091,1.17,,CSPN Prepaid Committee Fall 2022,,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2023,2022-06-30,1.439,106.3,2631,3091,1.17,,CSPN Prepaid Committee Fall 2023,Updated data unavailable as of the revision date of this document (data provided here as of 6/30/22),6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2024,2024-06-30,1.15,289.0,11844,34792,24.0,412.0,CSPN Prepaid Committee Fall 2024,Legacy tier 100%; All information is as of 6/30/2024. Amounts paid out include amounts paid to schools for benefits and does not include refunds to account owners,6
+MS,MS,Mississippi Prepaid Affordable College Tuition (MPACT),1997,Open,2025,2025-06-30,1.4,301.0,10821,35022,33.0,445.0,CSPN Prepaid Committee Fall 2025,,6
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2005,,1.06,76.9,11240,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2006,,1.01,88.8,11885,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2007,,1.07,104.6,12388,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2008,,1.01,101.6,12599,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2009,,0.87,90.8,13010,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2010,,0.966,108.5,13526,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2011,,1.058,130.5,14120,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2012,,1.034,142.1,14944,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2013,,1.116,162.65,16089,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2014,,1.262,194.6,17359,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2015,,1.279,214.3,18373,,,,CSPN quarterly workbooks (FY05-FY15 series),,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2018,,1.42,280.6,12453,21041,11.2,85.7,CSPN one-pager 2018,,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2020,,1.546,312.3,12172,22239,12.0,109.1,CSPN one-pager 2020,,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2021,,1.657,393.7,11997,22742,12.0,121.1,CSPN one-pager 2021,,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2022,6.30.21,1.789,356.0,11381,23216,12.0,133.2,CSPN Prepaid Committee Fall 2022,,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2023,6.30.23,2.275,386.0,11047,23627,11.9,145.0,CSPN Prepaid Committee Fall 2023,,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2024,2023-06-30,2.275,441.0,10553,23922,12.4,157.5,CSPN Prepaid Committee Fall 2024,,7
+NV,NV,Nevada Prepaid Tuition Program,1997,Open,2025,2024-06-30,2.264,478.7,10143,24248,13.2,170.7,CSPN Prepaid Committee Fall 2025,,7
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2005,,0.9575,984.7,86531,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2006,,0.9575,1081.51,87344,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2007,,1.048,1291.0,91379,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2008,,0.945,1291.0,91379,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2009,,0.905,1148.0,91185,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2010,,0.9362,1244.0,94098,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2011,,0.9798,1372.0,94854,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2012,,0.97,1399.0,98268,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2013,,1.017,1500.0,102121,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2014,,1.0948,1691.0,103485,,,,CSPN quarterly workbooks (FY05-FY15 series),,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2018,,1.2193,2012.0,107691,186401,223.2,2300.0,CSPN one-pager 2018,,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2020,,1.2365,2120.0,109411,195890,241.61,2730.0,CSPN one-pager 2020,,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2021,,1.4346,2400.0,109948,203230,215.98,2940.0,CSPN one-pager 2021,,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2022,6.30.22,1.2809,2140.0,109673,199821,229.77,3160.0,CSPN Prepaid Committee Fall 2022,,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2023,6.30.23,1.3104,2230.0,111252,208273,224.7,3390.0,CSPN Prepaid Committee Fall 2023,,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2024,2024-06-30,1.3817,2400.0,113494,217340,221.9,3600.0,CSPN Prepaid Committee Fall 2024,,8
+PA,PA,Pennsylvania Guaranteed Savings Plan,1993,Open,2025,2025-06-30,1.4617,2600.0,116628,227179,214.3,3820.0,CSPN Prepaid Committee Fall 2025,updated with 6/30/2025 data,8
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2009,,1.051,271.0,13568,,,,CSPN quarterly workbooks (FY05-FY15 series),,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2010,,1.046,291.0,18025,,,,CSPN quarterly workbooks (FY05-FY15 series),,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2011,,1.064,381.9,22426,,,,CSPN quarterly workbooks (FY05-FY15 series),,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2012,,1.05,351.8,22841,,,,CSPN quarterly workbooks (FY05-FY15 series),,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2013,,1.14,455.8,25477,,,,CSPN quarterly workbooks (FY05-FY15 series),,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2014,,1.212,572.5,27857,,,,CSPN quarterly workbooks (FY05-FY15 series),,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2015,,1.07,604.0,30178,,,,CSPN quarterly workbooks (FY05-FY15 series),,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2018,,1.14,840.0,31071,41866,8.0,65.0,CSPN one-pager 2018,,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2020,,1.16,941.0,38492,45781,6.0,,CSPN one-pager 2020,Texas Tuition Promise Fund,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2021,,1.21,1100.0,38480,45842,9.0,148.0,CSPN one-pager 2021,as of 8/31/2020,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2022,8.31.22,1.221,1200.0,40056,49098,38.0,211.0,CSPN Prepaid Committee Fall 2022,All information for the Texas plans is as of Aug. 31. 2022. Added Texas to footnote 1. First $ Paid Out in 2012.,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2023,8.31.23,1.34,1170.0,40473,50773,44.11,255.16,CSPN Prepaid Committee Fall 2023,All information for the Texas plans is as of Aug. 31. 2023. Added Texas to footnote 1. First $ Paid Out in 2012.,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2024,2024-08-31,1.587,1270.0,40637,52253,48.3,255.2,CSPN Prepaid Committee Fall 2024,All information for the Texas plans is as of Aug. 31. 2024,9
+TX-II,TX,Texas Tuition Promise Fund,2008,Open,2025,2025-08-31,1.726,1330.0,40737,55908,52.9,356.5,CSPN Prepaid Committee Fall 2025,All information for the Texas plans is as of Aug. 31. 2025.,9
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2005,,0.96,1370.0,67947,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2006,,0.98,1276.0,70037,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2007,,1.07,1550.0,71382,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2008,,0.97,1543.0,71812,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2009,,0.85,1335.0,71847,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2010,,0.901,1613.0,71373,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2011,,1.005,1925.0,70955,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2012,,1.034,1969.0,69847,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2013,,1.1,2146.0,68637,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2014,,1.244,2402.0,70490,,,,CSPN quarterly workbooks (FY05-FY15 series),,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2018,,1.367,2700.0,63073,129916,178.0,1700.0,CSPN one-pager 2018,,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2020,,1.517,2700.0,57952,133951,183.5,2100.0,CSPN one-pager 2020,as of 6.30.19,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2021,,1.935,3200.0,55989,136476,179.9,2300.0,CSPN one-pager 2021,as of 6.30.21,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2022,6.30.22,1.875,2900.0,52100,139814,204.5,2500.0,CSPN Prepaid Committee Fall 2022,,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2023,6.30.23,1.794,2400.0,50792,143576,181.2,2680.0,CSPN Prepaid Committee Fall 2023,,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2024,2024-06-30,1.93,2300.0,47655,145508,180.0,2860.0,CSPN Prepaid Committee Fall 2024,,10
+VA,VA,Virginia DB529 (Prepaid529 + Tuition Track Portfolio),1996,Open,2025,2025-06-30,2.18,2500.0,44529,147229,174.0,3030.0,CSPN Prepaid Committee Fall 2025,,10
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2005,,1.08,548.0,55184,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2006,,1.09,708.0,64384,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2007,,1.174,964.0,77405,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2008,,1.095,1039.6,88230,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2009,,0.842,1066.0,103272,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2010,,0.862,1375.0,116135,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2011,,0.79,1902.0,130664,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2012,,0.785,2026.75,121534,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2013,,0.94,2270.54,125753,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2014,,1.06,2657.0,127684,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2015,,1.4,2664.0,130260,,,,CSPN quarterly workbooks (FY05-FY15 series),,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2018,,1.356,2100.0,95866,157000,110.0,1100.0,CSPN one-pager 2018,,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2020,,1.31,1500.0,67153,175246,65.0,1800.0,CSPN one-pager 2020,,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2021,,1.66,1700.0,67820,178795,61.0,1900.0,CSPN one-pager 2021,,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2022,6.30.22,1.41,1620.0,67701,182253,75.0,2900.0,CSPN Prepaid Committee Fall 2022,$ Paid Out Since Inception includes incentive rollovers to DreamAhead,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2023,6.30.23,1.48,1610.0,67647,185633,83.0,2900.0,CSPN Prepaid Committee Fall 2023,$ Paid Out Since Inception includes incentive rollovers to DreamAhead,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2024,6.30.24,1.59,1750.0,66918,188829,97.0,3000.0,CSPN Prepaid Committee Fall 2024,$ Paid Out Since Inception includes incentive rollovers to DreamAhead,11
+WA,WA,Washington GET Prepaid Tuition Plan,1998,Open,2025,6.30.25,1.78,1890.0,65650,191546,105.0,3100.0,CSPN Prepaid Committee Fall 2025,$ Paid Out Since Inception includes incentive rollovers to DreamAhead,11
+US,U.S.,Private College 529 Plan,2003,Open,2021,,1.0,413.0,7573,14029,19.03,151.1,CSPN one-pager 2021,,12
+US,U.S.,Private College 529 Plan,2003,Open,2022,12.2.22,1.0,344.0,7524,14640,27.1,215.3,CSPN Prepaid Committee Fall 2022,$ Paid Out (both) as of 6.30.22.,12
+US,U.S.,Private College 529 Plan,2003,Open,2023,6.30.23,1.0,346.8,7518,15541,35.5,300.3,CSPN Prepaid Committee Fall 2023,"$ Paid Out (both) as of 6.30.23, includes redemptions and withdrawls from plan.",12
+US,U.S.,Private College 529 Plan,2003,Open,2024,6.30.24,1.0,352.0,7108,15000,38.0,338.3,CSPN Prepaid Committee Fall 2024,"$ Paid out (both) as of 6.30.24, includes redemptions and withdrawls from plan.",12
+US,U.S.,Private College 529 Plan,2003,Open,2025,6.30.25,1.0,354.0,6847,15100,36.0,374.0,CSPN Prepaid Committee Fall 2025,"$ Paid out (both) as of 6.30.25, includes redemptions and withdrawls from plan.",12
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2005,,1.05,576.0,28516,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2006,,1.04,509.0,25178,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2007,,1.05,440.0,22047,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2008,,1.08,366.0,19017,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2009,,1.08,299.0,16121,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2010,,1.13,242.0,13238,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2011,,1.06,200.21,11128,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2012,,1.111,174.36,9472,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2013,,1.126,155.4,8089,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2014,,1.219,141.98,7009,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2015,,1.284,132.61,6113,,,,CSPN quarterly workbooks (FY05-FY15 series),,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2018,,1.801,,,,,,CSPN one-pager 2018,MET I; accounts/assets reported combined under MET II,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2020,,1.801,,,,,,CSPN one-pager 2020,MET I; accounts/assets reported combined under MET II,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2021,,2.167,,,,,,CSPN one-pager 2021,MET I; accounts/assets reported combined under MET II,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2022,9.30.22,2.235,94.0,1800,,3.3,,CSPN Prepaid Committee Fall 2022,MET I (Plans B & C),13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2023,2023-09-30,2.611,93.6,1566,60848,2.0,,CSPN Prepaid Committee Fall 2023,MET I (Plans B & C); All data is as of 9/30/23,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2024,2024-09-30,3.579,103.5,1438,60883,1.5,,CSPN Prepaid Committee Fall 2024,MET I (Plans B & C); All data is as of 9/30/24,13
+MI-I,MI,Michigan Education Trust - MET I (Plans B & C),1988,Closed,2025,2025-09-30,4.181,105.7,1333,60912,1.5,,CSPN Prepaid Committee Fall 2025,MET I (Plans B & C),13
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2005,,0.912,725.0,56216,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2006,,0.925,745.0,54406,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2007,,0.976,817.0,73996,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2008,,0.672,627.0,74981,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2009,,0.623,571.0,74981,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2010,,1.0,487.3,74981,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2011,,1.023,416.0,39380,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2012,,0.568,312.5,34489,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2013,,1.1,231.0,32028,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2014,,1.125,184.9,29599,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2015,,1.17,136.0,27108,,,,CSPN quarterly workbooks (FY05-FY15 series),,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2018,,1.236,105.5,,76251,25.7,1100.0,CSPN one-pager 2018,,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2020,,1.236,105.5,,76251,25.7,1100.0,CSPN one-pager 2020,,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2021,,1.193,92.4,10869,76251,38.8,1256.0,CSPN one-pager 2021,,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2022,6.30.22,1.334,265.0,8772,76251,41.0,1300.0,CSPN Prepaid Committee Fall 2022,,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2023,"06.30.23
+ 12.31.23",2.072,229.9,6804,76251,28.0,1290.0,CSPN Prepaid Committee Fall 2023,,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2024,2024-09-30,3.806,205.2,4947,76251,29.2,1370.0,CSPN Prepaid Committee Fall 2024,,14
+AL,AL,Alabama Prepaid Affordable College Tuition (PACT),1989,Closed (2009),2025,2025-06-30,4.473,192.0,4295,76251,19.8,1348.0,CSPN Prepaid Committee Fall 2025,,14
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2005,,0.88,647.0,42847,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2006,,0.87,787.0,46709,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2007,,0.93,993.0,49814,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2008,,0.81,993.0,53127,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2009,,0.84,880.0,54965,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2010,,0.69,986.0,54900,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2011,,0.7,1290.0,54274,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2012,,0.716,1176.0,50163,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2013,,0.72,1170.0,48189,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2014,,0.78,1172.0,45838,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2015,,0.79,1085.0,43579,,,,CSPN quarterly workbooks (FY05-FY15 series),,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2018,,0.733,813.0,35183,73226,125.0,1100.0,CSPN one-pager 2018,,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2018,,0.733,813.0,35183,73226,125.0,1100.0,CSPN one-pager 2018,,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2020,,0.733,813.0,35183,73226,125.0,1100.0,CSPN one-pager 2020,,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2020,,0.733,813.0,35183,73226,125.0,1100.0,CSPN one-pager 2020,,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2021,,0.706,571.0,24781,73226,108.0,1400.0,CSPN one-pager 2021,,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2022,6.30.22,0.959,646.0,21675,73226,100.0,1500.0,CSPN Prepaid Committee Fall 2022,Two state appropriations were received in FY22 - one of $20M and a second of $230M,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2023,6.30.23,1.009,564.7,18726,73226,90.0,1600.0,CSPN Prepaid Committee Fall 2023,Two state appropriations were received in FY22 - one of $20M and a second of $230M,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2024,2024-06-30,1.089,497.0,15759,73226,104.6,1600.0,CSPN Prepaid Committee Fall 2024,Data pulled from 2024 Actuarial Valuation Report,15
+IL,IL,College Illinois! Prepaid Tuition Program,1998,Closed (2017),2025,2025-06-30,1.133,426.0,13358,73226,93.3,1750.0,CSPN Prepaid Committee Fall 2025,Data pulled from 2025 Actuarial Valuation Report.  *$23.2M in refunds; $70.1M in tuition payments,15
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2005,,0.95,106.3,7521,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2006,,0.876,118.4,7246,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2007,,0.918,138.0,7121,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2008,,0.803,135.5,6996,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2009,,0.66,103.4,6822,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2010,,0.654,109.1,6556,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2011,,0.72,121.8,6295,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2012,,0.69,121.6,6040,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2013,,0.69,114.6,5757,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2014,,0.84,117.4,5309,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2015,,0.82,102.5,4885,,,,CSPN quarterly workbooks (FY05-FY15 series),,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2018,,0.654,68.9,3731,9850,13.6,151.1,CSPN one-pager 2018,,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2020,,0.716,70.3,3804,9850,13.8,137.5,CSPN one-pager 2020,,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2021,,0.527,33.1,2591,9850,14.7,152.2,CSPN one-pager 2021,,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2022,6.30.22,0.356,19.1,2024,9850,13.4,165.6,CSPN Prepaid Committee Fall 2022,,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2023,6.30.23,0.195,7.2,1880,9850,10.9,176.5,CSPN Prepaid Committee Fall 2023,,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2024,2024-06-30,0.08,2.7,1626,8975,8.8,185.3,CSPN Prepaid Committee Fall 2024,In FY 2024 the KAPT program depleted account owner funds and received a state general fund allocation of $3.7 M to meet obligations of program. The General Assembly has budgeted FY25 & FY26 $14.3M to cover future payouts.,16
+KY,KY,KY Affordable Prepaid Tuition (KAPT),2000,Closed (2004),2025,2025-06-30,0.125,3.3,1338,8975,6.7,192.1,CSPN Prepaid Committee Fall 2025,In FY 2024 the KAPT program depleted account owner funds and received a state general fund allocation of $3.7 M to meet obligations of program. The General Assembly has budgeted FY25 & FY26 $14.3M to cover future payouts.,16
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2005,,0.78,863.2,136151,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2006,,0.83,864.0,99926,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2007,,1.03,896.0,91792,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2008,,0.95,759.0,79625,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2009,,0.91,591.0,73709,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2010,,0.89,562.1,67795,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2011,,0.98,581.1,63238,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2012,,0.94,520.0,60475,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2013,,1.06,481.43,54998,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2014,,1.18,465.41,45411,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2015,,1.18,399.92,37310,,,,CSPN quarterly workbooks (FY05-FY15 series),,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2018,,1.31,269.2,21946,136901,47.5,562.3,CSPN one-pager 2018,cash basis 147%,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2020,,1.59,210.6,14524,136901,35.6,597.9,CSPN one-pager 2020,cash basis 184%,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2021,,1.77,192.9,12054,136901,24.0,621.9,CSPN one-pager 2021,cash basis 207%,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2022,6.30.22,1.98,157.6,9199,139901,26.4,695.8,CSPN Prepaid Committee Fall 2022,,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2023,6.30.2023,2.31,143.2,6934,139901,16.6,706.4,CSPN Prepaid Committee Fall 2023,,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2024,2024-06-30,2.82,135.3,5346,139901,14.6,721.0,CSPN Prepaid Committee Fall 2024,,17
+OH,OH,Ohio Guaranteed Savings Plan,1989,Closed (2003),2025,2025-06-30,3.4,125.0,3629,139901,17.5,738.5,CSPN Prepaid Committee Fall 2025,"Data pulled from August 14, 2025 OTTA Board Meeting Minutes *Reserve is anticipated to shrink to 115% after transferring $82.7M in reserve funds to the strategic square footage reduction fund",17
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2005,,0.769,167.4,6262,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2006,,0.774,111.0,6330,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2007,,0.814,130.0,6320,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2008,,0.814,138.0,6320,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2009,,0.661,123.0,6175,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2010,,0.7,126.0,6135,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2011,,0.79,135.75,6005,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2012,,0.774,122.47,5935,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2013,,0.64,108.64,5793,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2014,,,,5758,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2015,,,90.0,5662,,,,CSPN quarterly workbooks (FY05-FY15 series),,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2021,,0.409,20.1,2046,7413,10.8,182.8,CSPN one-pager 2021,,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2022,6.30.22,1.077,38.8,2249,7413,9.5,192.0,CSPN Prepaid Committee Fall 2022,All information from 2022 Actuarial Valuation Report and 2021 data submission,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2023,6.30.23,1.175,31.3,1602,7413,7.7,197.1,CSPN Prepaid Committee Fall 2023,,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2024,2024-06-30,1.278,25.6,1399,7413,6.8,203.9,CSPN Prepaid Committee Fall 2024,Data pulled from 2024 Actuarial Valuation Report,18
+SC,SC,South Carolina Tuition Prepayment Plan,1997,Closed (2008),2025,2025-06-30,1.505,20.0,1160,7413,6.7,210.6,CSPN Prepaid Committee Fall 2025,Data pulled from 2025 Actuarial Valuation Report,18
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2005,,0.89,1343.0,158438,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2006,,0.947,1580.0,158438,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2007,,0.947,1879.0,158442,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2008,,0.927,1728.0,158442,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2009,,0.731,1944.0,105694,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2010,,0.708,1846.0,94147,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2011,,0.688,1696.0,89143,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2012,,0.68,1275.0,83846,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2013,,0.66,1086.0,78076,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2014,,0.661,1065.5,72055,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2015,,0.65,885.2,66032,,,,CSPN quarterly workbooks (FY05-FY15 series),,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2018,,0.507,729.0,47017,158442,96.0,1800.0,CSPN one-pager 2018,,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2020,,0.507,424.0,47017,158442,96.0,1800.0,CSPN one-pager 2020,,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2021,,0.383,299.0,34629,158442,158.0,2200.0,CSPN one-pager 2021,as of 8/31/2020,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2022,8.31.22,0.489,229.2,24430,158442,115.6,2400.0,CSPN Prepaid Committee Fall 2022,All information for the Texas plans is as of Aug. 31. 2022. Added Texas to footnote 1.,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2023,8.31.23,1.02,338.63,19874,158442,90.45,2510.0,CSPN Prepaid Committee Fall 2023,All information for the Texas plans is as of Aug. 31. 2023. Added Texas to footnote 1.,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2024,2024-08-31,1.067,242.1,15661,158442,63.8,2600.0,CSPN Prepaid Committee Fall 2024,All information for the Texas plans is as of Aug. 31. 2024,19
+TX-I,TX,Texas Guaranteed Tuition Plan,1996,Closed (2003),2025,2025-08-31,1.085,163.0,11829,158442,43.3,2620.0,CSPN Prepaid Committee Fall 2025,All information for the Texas plans is as of Aug. 31. 2025.,19
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2005,,0.84,57.6,8521,,,,CSPN quarterly workbooks (FY05-FY15 series),,20
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2006,,0.8,57.5,8521,,,,CSPN quarterly workbooks (FY05-FY15 series),,20
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2007,,1.0,99.6,8826,,,,CSPN quarterly workbooks (FY05-FY15 series),,20
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2008,,0.8669,90.3,8941,,,,CSPN quarterly workbooks (FY05-FY15 series),,20
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2009,,0.8459,90.3,8941,,,,CSPN quarterly workbooks (FY05-FY15 series),,20
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2010,,1.04,80.5,9019,,,,CSPN quarterly workbooks (FY05-FY15 series),,20
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2011,,0.96,100.5,8830,,,,CSPN quarterly workbooks (FY05-FY15 series),,20
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2018,,1.0295,24.8,1809,10018,7.7,100.9,CSPN one-pager 2018,,20
+TN,TN,Tennessee BEST Prepaid (Baccalaureate Education System Trust),1997,Closed (2021),2021,,2.589,9.07,153,,,,CSPN one-pager 2021,as of 9/30/2020,20
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2005,,0.94,99.6,8331,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2006,,0.95,103.0,8079,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2007,,0.978,113.0,7755,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2008,,0.84,99.0,7376,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2009,,0.74,78.0,6963,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2010,,0.78,82.0,6529,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2011,,0.88,87.6,5957,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2012,,0.83,80.29,5593,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2013,,0.85,77.87,5135,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2014,,0.91,78.44,4708,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2015,,0.85,69.27,4141,,,,CSPN quarterly workbooks (FY05-FY15 series),,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2018,,0.849,43.0,2535,9739,11.0,125.0,CSPN one-pager 2018,,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2020,,0.853,55.0,2585,9739,11.0,,CSPN one-pager 2020,,21
+WV,WV,West Virginia Prepaid Tuition Plan,1997,Closed (2021),2021,,1.0,3.0,584,9739,5.0,168.0,CSPN one-pager 2021,,21
+CO,CO,Colorado Prepaid Tuition Plan,1997,Closed (depleted),2005,,1.0,41.0,4620,,,,CSPN quarterly workbooks (FY05-FY15 series),,22
+CO,CO,Colorado Prepaid Tuition Plan,1997,Closed (depleted),2006,,1.0,38.4,4189,,,,CSPN quarterly workbooks (FY05-FY15 series),,22
+CO,CO,Colorado Prepaid Tuition Plan,1997,Closed (depleted),2007,,1.0,38.4,4189,,,,CSPN quarterly workbooks (FY05-FY15 series),,22
+CO,CO,Colorado Prepaid Tuition Plan,1997,Closed (depleted),2008,,1.0,38.4,4189,,,,CSPN quarterly workbooks (FY05-FY15 series),,22
+CO,CO,Colorado Prepaid Tuition Plan,1997,Closed (depleted),2009,,1.0,29.5,3200,,,,CSPN quarterly workbooks (FY05-FY15 series),,22
+CO,CO,Colorado Prepaid Tuition Plan,1997,Closed (depleted),2010,,1.0,29.5,3200,,,,CSPN quarterly workbooks (FY05-FY15 series),,22
+CO,CO,Colorado Prepaid Tuition Plan,1997,Closed (depleted),2011,,1.0,26.7,2412,,,,CSPN quarterly workbooks (FY05-FY15 series),,22
+CO,CO,Colorado Prepaid Tuition Plan,1997,Closed (depleted),2012,,1.0,26.0,2292,,,,CSPN quarterly workbooks (FY05-FY15 series),,22
