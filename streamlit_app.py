@@ -489,32 +489,67 @@ with tabs[0]:
     c[3].metric("Latest active accounts", f"{tot_acct:,.0f}")
     c[4].metric("Reporting periods", f"{len(years)}  ({min(years)}–{max(years)})")
 
-    st.markdown("#### Reporting coverage")
-    st.caption("Green = reported · amber = carried-forward or reported as of an earlier date · blank = not collected.")
+    st.markdown("#### Reporting depth")
+    st.caption("Each cell shows how many of the six tracked metrics a plan reported that year "
+               "(funded status, assets, active accounts, accounts since inception, and the two payout figures). "
+               "Darker means a fuller record. Blank means the year was not collected for that plan. "
+               "Hover for the detail; an ⚠ marks a figure carried forward or reported as of an earlier date.")
+
     keys = plan_order(d["plan_key"].unique())
-    zmap, text = [], []
+    zmap, hover, marks = [], [], []
     for k in keys:
-        zrow, trow = [], []
+        zrow, hrow, mrow = [], [], []
         for y in years:
             sub = d[(d["plan_key"] == k) & (d["reporting_year"] == y)]
             if sub.empty:
-                zrow.append(0); trow.append("")
+                zrow.append(None); hrow.append(f"<b>{name_of(k)}</b> · {y}<br>Not collected"); mrow.append("")
+                continue
+            r0 = sub.iloc[0]
+            present = [METRICS[m][0] for m in NUM_COLS if pd.notna(r0[m])]
+            note = str(r0["note"]).lower()
+            asof = str(r0["as_of"])
+            m = re.search(r"(20\d\d)", asof)
+            lagged = bool(m) and int(m.group(1)) < y
+            flagged = ("unavailable" in note) or ("carried" in note) or lagged
+            zrow.append(len(present))
+            bits = [f"<b>{name_of(k)}</b> · {y}"]
+            if not present:
+                bits.append("Row present, no figures reported")
             else:
-                note = str(sub.iloc[0]["note"]).lower()
-                asof = str(sub.iloc[0]["as_of"])
-                lagged = bool(re.search(r"(20\d\d)", asof)) and (re.search(r"(20\d\d)", asof).group(1) != str(y)) and ("unavailable" in note or "carried" in note or int(re.search(r"(20\d\d)", asof).group(1)) < y)
-                flagged = ("unavailable" in note or "carried" in note or lagged)
-                zrow.append(2 if flagged else 1)
-                trow.append("●")
-        zmap.append(zrow); text.append(trow)
+                bits.append(f"{len(present)} of {len(NUM_COLS)} metrics reported")
+                bits.append("· " + "<br>· ".join(present))
+            if asof and asof.lower() not in ("nan", ""):
+                bits.append(f"As of {asof}")
+            if flagged:
+                bits.append("⚠ carried forward or lagged as-of")
+            hrow.append("<br>".join(bits))
+            mrow.append("⚠" if flagged else "")
+        zmap.append(zrow); hover.append(hrow); marks.append(mrow)
+
     fig = go.Figure(go.Heatmap(
         z=zmap, x=[str(y) for y in years], y=[name_of(k) for k in keys],
-        colorscale=[[0, GREY], [0.5, AMBER], [1, GREEN]], zmin=0, zmax=2,
-        showscale=False, xgap=2, ygap=2,
-        hovertemplate="%{y} · %{x}<extra></extra>"))
-    fig.update_layout(height=560, margin=dict(l=10, r=10, t=10, b=10),
-                      yaxis=dict(autorange="reversed"), plot_bgcolor="white")
+        text=marks, texttemplate="%{text}", textfont=dict(size=11, color="#7A4B00"),
+        customdata=hover, hovertemplate="%{customdata}<extra></extra>",
+        colorscale=[[0.00, "#E4E4E2"], [0.16, "#E4E4E2"],      # 0 metrics: grey
+                    [0.17, "#EAF3E4"], [0.50, MIST],
+                    [0.75, "#7BB661"], [1.00, DARK]],
+        zmin=0, zmax=6, xgap=2, ygap=2,
+        colorbar=dict(title=dict(text="Metrics<br>reported", font=dict(size=11)),
+                      tickvals=[0, 1, 2, 3, 4, 5, 6], thickness=12, len=0.55, outlinewidth=0),
+        hoverongaps=False))
+    fig.update_layout(height=580, margin=dict(l=10, r=10, t=10, b=10),
+                      yaxis=dict(autorange="reversed"), plot_bgcolor="white", paper_bgcolor="white")
     st.plotly_chart(fig, width='stretch')
+
+    # era summary: average depth by year, which is the real story
+    depth = (d.set_index(["plan_key", "reporting_year"])[NUM_COLS].notna().sum(axis=1)
+              .groupby(level=1).mean().round(1))
+    ec = st.columns(3)
+    ec[0].metric("Avg metrics/plan, 2005–2015", f"{depth.loc[[y for y in depth.index if y <= 2015]].mean():.1f} of 6")
+    mid = [y for y in depth.index if 2016 <= y <= 2021]
+    ec[1].metric("Avg metrics/plan, 2018–2021", f"{depth.loc[mid].mean():.1f} of 6" if mid else "—")
+    era = [y for y in depth.index if y >= 2022]
+    ec[2].metric("Avg metrics/plan, 2022+", f"{depth.loc[era].mean():.1f} of 6" if era else "—")
 
     missing_years = [y for y in range(min(years), max(years)+1) if y not in years]
     if missing_years:
