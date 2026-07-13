@@ -144,6 +144,7 @@ def latest_per_plan(d, col):
         out[k] = (g.iloc[-1][col], int(g.iloc[-1]["reporting_year"]))
     return out
 
+@st.cache_data(show_spinner=False)
 def build_workbook(d):
     """Rebuild a consolidated workbook (README + Master + wide matrices + attributes)."""
     import openpyxl
@@ -323,6 +324,7 @@ def _combine_mi(mi1, mi2, col, formatter):
     if mi2 is not None and pd.notna(mi2.get(col)): parts.append(f"MET II: {formatter(mi2[col])}")
     return "  ".join(parts)
 
+@st.cache_data(show_spinner=False)
 def committee_rows(d, year, ya, all_years=None):
     """Return (open_rows, closed_rows); each row is a dict keyed by COMMITTEE_HEADS plus _funded_num."""
     dy = d[d["reporting_year"] == year]
@@ -428,6 +430,7 @@ def write_committee_sheet(ws, d, year, ya, all_years=None):
     for i, w in enumerate(widths, 1): ws.column_dimensions[L(i)].width = w
     ws.freeze_panes = "A5"
 
+@st.cache_data(show_spinner=False)
 def committee_workbook(d, years, attrs_by_year):
     import openpyxl
     wb = openpyxl.Workbook(); wb.remove(wb.active)
@@ -437,6 +440,7 @@ def committee_workbook(d, years, attrs_by_year):
     buf = io.BytesIO(); wb.save(buf); buf.seek(0)
     return buf.getvalue()
 
+@st.cache_data(show_spinner=False)
 def template_bytes():
     import openpyxl
     from openpyxl.styles import Font, PatternFill, Alignment
@@ -514,14 +518,14 @@ with tabs[0]:
 
     keys = plan_order(d["plan_key"].unique())
     zmap, hover, marks = [], [], []
+    idx = {(r["plan_key"], int(r["reporting_year"])): r for _, r in d.iterrows()}
     for k in keys:
         zrow, hrow, mrow = [], [], []
         for y in years:
-            sub = d[(d["plan_key"] == k) & (d["reporting_year"] == y)]
-            if sub.empty:
+            r0 = idx.get((k, int(y)))
+            if r0 is None:
                 zrow.append(None); hrow.append(f"<b>{name_of(k)}</b> · {y}<br>Not collected"); mrow.append("")
                 continue
-            r0 = sub.iloc[0]
             present = [METRICS[m][0] for m in NUM_COLS if pd.notna(r0[m])]
             note = str(r0["note"]).lower()
             asof = str(r0["as_of"])
