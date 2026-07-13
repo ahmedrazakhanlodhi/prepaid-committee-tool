@@ -252,8 +252,8 @@ COMMITTEE_HEADS = ["State", "Plan Name", "Year Established", "Full Faith and Cre
 def _money_str(v):
     if v is None or (isinstance(v, float) and pd.isna(v)): return ""
     v = float(v)
-    if v >= 1000: return f"${v/1000:,.1f}B"
-    return f"${int(v):,}M" if v == int(v) else f"${v:,.1f}M"
+    if v >= 1000: return f"${v/1000:g}B"     # 1330 -> $1.33B, not $1.3B
+    return f"${v:g}M"
 
 def _pct_str(v):
     if v is None or (isinstance(v, float) and pd.isna(v)): return ""
@@ -282,8 +282,10 @@ def _fmt_assumption(v):
             pass
     return s
 
-def _attr_for(dk, ya):
-    """Descriptive columns for a display key: year's own values, falling back to static/registry."""
+def _attr_for(dk, ya, year=None, all_years=None):
+    """Descriptive columns for a display key. Uses the year's own values, then falls back to
+    the most recent earlier year that reported them (a plan may skip a year, but its tax
+    treatment and benefit structure do not change), then to the static registry."""
     akey = "MI-II" if dk == "MI" else dk
     a = ya.get(akey) or (ya.get("MI-I") if dk == "MI" else None) or {}
     static = ATTR.get("MI" if dk in ("MI", "MI-I", "MI-II") else dk, {})
@@ -291,17 +293,28 @@ def _attr_for(dk, ya):
     est = REG.get(regkey, ["", "", "", "", 0])[2]
     est = str(est).replace(".0", "") if est else (str(a.get("established", "")).replace(".0", ""))
 
+    def clean(v):
+        v = str(v or "").strip()
+        return "" if ("unavailable" in v.lower() or v.lower() in ("nan", "none")) else v
+
     def pick(field):
-        v = a.get(field) or ""
-        if "unavailable" in str(v).lower(): v = ""      # don't leak "data unavailable" into descriptive cells
-        return v or static.get(field, "")
+        v = clean(a.get(field))
+        if v:
+            return v
+        if all_years and year is not None:          # carry forward from the last year that reported it
+            for y in sorted((int(k) for k in all_years if str(k).isdigit() and int(k) < year), reverse=True):
+                prev = (all_years.get(str(y), {}) or {}).get(akey, {}) or {}
+                v = clean(prev.get(field))
+                if v:
+                    return v
+        return clean(static.get(field))
 
     return {
         "established": est,
         "full_faith": pick("full_faith"), "tax": pick("tax"), "benefit": pick("benefit"),
-        "min_benefits": a.get("min_benefits", "") if "unavailable" not in str(a.get("min_benefits", "")).lower() else "",
-        "tuition_growth": _fmt_assumption(a.get("tuition_growth", "")) if "unavailable" not in str(a.get("tuition_growth", "")).lower() else "",
-        "inv_return": _fmt_assumption(a.get("inv_return", "")) if "unavailable" not in str(a.get("inv_return", "")).lower() else "",
+        "min_benefits": pick("min_benefits"),
+        "tuition_growth": _fmt_assumption(pick("tuition_growth")),
+        "inv_return": _fmt_assumption(pick("inv_return")),
     }
 
 def _combine_mi(mi1, mi2, col, formatter):
@@ -310,13 +323,13 @@ def _combine_mi(mi1, mi2, col, formatter):
     if mi2 is not None and pd.notna(mi2.get(col)): parts.append(f"MET II: {formatter(mi2[col])}")
     return "  ".join(parts)
 
-def committee_rows(d, year, ya):
+def committee_rows(d, year, ya, all_years=None):
     """Return (open_rows, closed_rows); each row is a dict keyed by COMMITTEE_HEADS plus _funded_num."""
     dy = d[d["reporting_year"] == year]
     by_key = {r["plan_key"]: r for _, r in dy.iterrows()}
 
     def build(dk):
-        at = _attr_for(dk, ya)
+        at = _attr_for(dk, ya, year, all_years)
         base = {"State": "U.S." if dk == "US" else REG.get(dk if dk != "MI" else "MI-II", [dk])[0],
                 "Plan Name": "Michigan Education Trust (MET)" if dk == "MI" else REG.get(dk, ["", dk])[1],
                 "Year Established": at["established"], "Full Faith and Credit": at["full_faith"],
@@ -362,7 +375,7 @@ def committee_rows(d, year, ya):
     closed_rows = [b for b in (build(dk) for dk in CLOSED_DISP) if b]
     return open_rows, closed_rows
 
-def write_committee_sheet(ws, d, year, ya):
+def write_committee_sheet(ws, d, year, ya, all_years=None):
     from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
     from openpyxl.utils import get_column_letter as L
     hf = Font(name="Arial", bold=True, color="FFFFFF", size=9)
@@ -394,7 +407,7 @@ def write_committee_sheet(ws, d, year, ya):
     for c, t in {8:"Tuition Growth",9:"Investment Return",10:"Funded Status",11:"As of Date"}.items():
         cell = ws.cell(4, c, t); cell.font = hf; cell.fill = fill; cell.alignment = center; cell.border = bd
 
-    open_rows, closed_rows = committee_rows(d, year, ya)
+    open_rows, closed_rows = committee_rows(d, year, ya, all_years)
     r = 5
     for title, rows in [("OPEN PLANS", open_rows), ("CLOSED PLANS", closed_rows)]:
         if not rows: continue
@@ -420,7 +433,7 @@ def committee_workbook(d, years, attrs_by_year):
     wb = openpyxl.Workbook(); wb.remove(wb.active)
     for y in years:
         ws = wb.create_sheet(str(y))
-        write_committee_sheet(ws, d, y, attrs_by_year.get(str(y), {}))
+        write_committee_sheet(ws, d, y, attrs_by_year.get(str(y), {}), attrs_by_year)
     buf = io.BytesIO(); wb.save(buf); buf.seek(0)
     return buf.getvalue()
 
@@ -475,18 +488,22 @@ tabs = st.tabs(["Overview", "Plan Profile", "Compare", "Trends", "Committee Era 
 with tabs[0]:
     d = df()
     years = sorted(d["reporting_year"].unique())
-    la = latest_per_plan(d, "assets_m")
-    lc = latest_per_plan(d, "active_accounts")
-    tot_assets = sum(v for v, _ in la.values())
-    tot_acct = sum(v for v, _ in lc.values())
+    latest = max(years)
+    dl = d[d["reporting_year"] == latest]
+    tot_assets = dl["assets_m"].sum(skipna=True)
+    tot_acct = dl["active_accounts"].sum(skipna=True)
+    n_report = dl["assets_m"].notna().sum()
     n_open = sum(1 for k in d["plan_key"].unique() if REG.get(k, ["","","","",0])[3] == "Open")
     n_closed = d["plan_key"].nunique() - n_open
 
     c = st.columns(5)
     c[0].metric("Plans tracked", d["plan_key"].nunique())
     c[1].metric("Open / Closed", f"{n_open} / {n_closed}")
-    c[2].metric("Latest assets (sum)", f"${tot_assets/1000:,.1f}B")
-    c[3].metric("Latest active accounts", f"{tot_acct:,.0f}")
+    c[2].metric(f"Assets, {latest}", f"${tot_assets/1000:,.1f}B",
+                help=f"Sum across the {n_report} plans that reported assets in {latest}. "
+                     "Plans whose last report predates this year are excluded rather than carried forward.")
+    c[3].metric(f"Active accounts, {latest}", f"{tot_acct:,.0f}",
+                help=f"Sum across plans reporting in {latest}.")
     c[4].metric("Reporting periods", f"{len(years)}  ({min(years)}–{max(years)})")
 
     st.markdown("#### Reporting depth")
@@ -623,9 +640,13 @@ with tabs[2]:
     if rows:
         rows.sort(key=lambda x: x[1], reverse=True)
         kind = METRICS[metric][1]
+        mixed = len({r[2] for r in rows}) > 1
+        labels = [f"{fmt(r[1], kind)}  ({r[2]})" if mixed else fmt(r[1], kind) for r in rows]
         fig = go.Figure(go.Bar(
             x=[r[1] for r in rows], y=[r[0] for r in rows], orientation="h",
-            marker_color=GREEN, text=[fmt(r[1], kind) for r in rows], textposition="auto"))
+            marker_color=GREEN, text=labels, textposition="auto"))
+        if mixed:
+            st.caption("These plans last reported in different years. The source year is shown on each bar.")
         fig.update_layout(height=40*len(rows)+80, margin=dict(l=8, r=8, t=10, b=8),
                           plot_bgcolor="white", yaxis=dict(autorange="reversed"),
                           xaxis=dict(tickformat=".0%" if kind == "pct" else ",.0f"))
@@ -676,7 +697,7 @@ with tabs[4]:
 
         if view == "Single-year detail":
             yr = st.selectbox("Year", list(reversed(era_years)))
-            op_rows, cl_rows = committee_rows(d, yr, aby.get(str(yr), {}))
+            op_rows, cl_rows = committee_rows(d, yr, aby.get(str(yr), {}), aby)
             det = pd.DataFrame(
                 [{"Section": "Open", **{k: v for k, v in r.items() if k != "_funded_num"}} for r in op_rows] +
                 [{"Section": "Closed", **{k: v for k, v in r.items() if k != "_funded_num"}} for r in cl_rows])
@@ -752,6 +773,11 @@ with tabs[5]:
             flags.append((name_of(k), y, f"Reported as of {asof} (earlier than collection year)"))
         if pd.notna(r["funded"]) and (r["funded"] > 4 or r["funded"] < 0.15):
             flags.append((name_of(k), y, f"Outlier funded status ({r['funded']*100:.0f}%) — confirm"))
+        # scale sanity: a plan cannot have fewer lifetime accounts than currently active ones
+        if pd.notna(r["accounts_since_inception"]) and pd.notna(r["active_accounts"]) \
+           and r["accounts_since_inception"] < r["active_accounts"]:
+            flags.append((name_of(k), y, "Accounts since inception is below active accounts — "
+                                         "likely a unit or scale error in the source"))
     if flags:
         st.dataframe(pd.DataFrame(flags, columns=["Plan", "Year", "Flag"]),
                      width='stretch', hide_index=True)
@@ -843,7 +869,7 @@ with tabs[7]:
     if sel_years:
         sel_years = sorted(sel_years)
         preview_year = st.selectbox("Preview year", list(reversed(sel_years)))
-        op_rows, cl_rows = committee_rows(d, preview_year, aby.get(str(preview_year), {}))
+        op_rows, cl_rows = committee_rows(d, preview_year, aby.get(str(preview_year), {}), aby)
         prev = pd.DataFrame(
             [{**{"Section": "Open"}, **{k: v for k, v in r.items() if k != "_funded_num"}} for r in op_rows] +
             [{**{"Section": "Closed"}, **{k: v for k, v in r.items() if k != "_funded_num"}} for r in cl_rows])
