@@ -50,11 +50,25 @@ def _p_money_m(raw):
     return round(v, 3)
 
 def _p_int(raw):
+    """Parse a count. Handles plain numbers and scaled forms the committee uses,
+    e.g. '1.37M' -> 1370000, '45K' -> 45000, '1.2 million' -> 1200000."""
     if raw is None: return None
-    s = str(raw).strip().replace("\n"," ").replace(",", "")
-    if s.upper() in ("N/A","NA","-","UNAVAILABLE",""): return None
-    m = re.match(r'^(\d+)', s)
-    return int(m.group(1)) if m else None
+    if isinstance(raw, (int, float)):
+        try: return int(raw)
+        except (ValueError, OverflowError): return None
+    s = str(raw).strip().replace("\n", " ").replace(",", "")
+    if s.upper() in ("N/A", "NA", "-", "UNAVAILABLE", ""): return None
+    m = re.match(r'^([\d\.]+)\s*(K|M|B|THOUSAND|MILLION|BILLION)?\b', s, re.I)
+    if not m: return None
+    try:
+        v = float(m.group(1))
+    except ValueError:
+        return None
+    unit = (m.group(2) or "").upper()
+    if unit in ("K", "THOUSAND"):  v *= 1_000
+    elif unit in ("M", "MILLION"): v *= 1_000_000
+    elif unit in ("B", "BILLION"): v *= 1_000_000_000
+    return int(round(v))
 
 def _norm_asof(v):
     if v is None: return ""

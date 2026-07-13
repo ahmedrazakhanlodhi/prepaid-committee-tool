@@ -847,13 +847,23 @@ with tabs[6]:
             st.error(f"Could not parse this file: {e}")
 
     st.divider()
-    st.markdown("#### Download the current master")
-    st.caption("Commit these back to the repo (replace prepaid_master.csv, and share the workbook) to make the new year permanent.")
+    st.markdown("#### Save the new year permanently")
+    st.info("Two files make up the record. Download **both** and commit them, or the new year's "
+            "actuarial assumptions and descriptive columns will be lost on the next reboot.", icon="💾")
     dl = st.columns(2)
-    dl[0].download_button("Master (CSV, source of truth)", df().to_csv(index=False).encode(),
-                          file_name="prepaid_master.csv")
-    dl[1].download_button("Consolidated workbook (Excel)", build_workbook(df()),
-                          file_name=f"CSPN_Prepaid_Consolidated_{min(df()['reporting_year'])}-{max(df()['reporting_year'])}.xlsx")
+    dl[0].download_button("1. prepaid_master.csv  (the figures)",
+                          df().to_csv(index=False).encode(),
+                          file_name="prepaid_master.csv", type="primary")
+    dl[1].download_button("2. prepaid_attrs_by_year.json  (assumptions + attributes)",
+                          json.dumps(st.session_state.attrs_by_year, ensure_ascii=False, indent=0).encode(),
+                          file_name="prepaid_attrs_by_year.json", type="primary")
+    st.caption("Replace `data/prepaid_master.csv` and `data/prepaid_attrs_by_year.json` in the repo, "
+               "then commit and push. Streamlit Cloud redeploys automatically.")
+
+    st.divider()
+    st.markdown("#### Other downloads")
+    st.download_button("Consolidated analytical workbook (Excel)", build_workbook(df()),
+                       file_name=f"CSPN_Prepaid_Consolidated_{min(df()['reporting_year'])}-{max(df()['reporting_year'])}.xlsx")
 
 # =========================================================== EXPORTS
 with tabs[7]:

@@ -68,10 +68,14 @@ streamlit run streamlit_app.py
    MET I/II and Mississippi tiers split automatically. A blank template is downloadable
    there if you want submissions in a fixed shape.
 2. Review the parsed preview. Choose overwrite or skip if the year already exists, then merge.
-3. Download **Master (CSV)** and commit it to `data/prepaid_master.csv`.
+3. Download **both** files the tab offers and commit them:
+   - `prepaid_master.csv` → `data/prepaid_master.csv` (the figures)
+   - `prepaid_attrs_by_year.json` → `data/prepaid_attrs_by_year.json` (that year's actuarial
+     assumptions, benefit structure, and tax columns)
 
 That commit is what makes the year permanent. Streamlit Community Cloud does not persist
-in-app writes, so the file in `data/` is the source of truth.
+in-app writes, so the files in `data/` are the source of truth. Committing only the CSV
+keeps the numbers but loses the new year's descriptive columns.
 
 ## Exports
 
