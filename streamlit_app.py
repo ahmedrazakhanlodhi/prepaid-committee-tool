@@ -474,13 +474,80 @@ def template_bytes():
     buf = io.BytesIO(); wb.save(buf); buf.seek(0)
     return buf.getvalue()
 
+@st.cache_data(show_spinner=False)
+def _overview_trend_figs(d):
+    a_by_yr = d.groupby("reporting_year")["assets_m"].sum(min_count=1)
+    n_by_yr = d.groupby("reporting_year")["active_accounts"].sum(min_count=1)
+    fa = go.Figure(go.Scatter(x=a_by_yr.index, y=a_by_yr.values/1000, mode="lines+markers",
+                   line=dict(color=GREEN, width=3), marker=dict(size=6, color=DARK),
+                   fill="tozeroy", fillcolor="rgba(58,137,22,0.10)",
+                   hovertemplate="%{x}: $%{y:.1f}B<extra></extra>"))
+    fa.update_layout(height=260, margin=dict(l=6, r=6, t=6, b=6), plot_bgcolor="white",
+                     yaxis=dict(title="$B", ticksuffix="B"), showlegend=False,
+                     xaxis=dict(dtick=5, tick0=2005, range=[2004, 2026]))
+    fn = go.Figure(go.Scatter(x=n_by_yr.index, y=n_by_yr.values, mode="lines+markers",
+                   line=dict(color=STEEL, width=3), marker=dict(size=6, color="#4c5d5d"),
+                   fill="tozeroy", fillcolor="rgba(112,134,134,0.12)",
+                   hovertemplate="%{x}: %{y:,.0f}<extra></extra>"))
+    fn.update_layout(height=260, margin=dict(l=6, r=6, t=6, b=6), plot_bgcolor="white",
+                     yaxis=dict(tickformat=",.0f"), showlegend=False,
+                     xaxis=dict(dtick=5, tick0=2005, range=[2004, 2026]))
+    return fa, fn
+
+@st.cache_data(show_spinner=False)
+def _overview_map_fig(d, latest, map_metric):
+    import numpy as np
+    ALL_STATES = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA",
+                  "KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+                  "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT",
+                  "VA","WA","WV","WI","WY"]
+    col = "assets_m" if map_metric == "Assets" else "active_accounts"
+    dm = d[d["reporting_year"] == latest].copy()
+    dm["stcode"] = dm["plan_key"].map(lambda k: REG.get(k, [""])[0])
+    dm = dm[dm["stcode"] != "U.S."]
+    grp = dm.groupby("stcode")
+    val = grp[col].sum(min_count=1)
+    plans = grp["plan_key"].apply(lambda s: ", ".join(sorted(name_of(x) for x in s)))
+    mp = pd.DataFrame({"stcode": val.index, "val": val.values,
+                       "plans": [plans[s] for s in val.index]}).dropna(subset=["val"])
+    def _vs(v):
+        return (f"${v/1000:,.2f}B" if v >= 1000 else f"${v:,.0f}M") if map_metric == "Assets" else f"{v:,.0f}"
+    mp["vstr"] = mp["val"].apply(_vs)
+    have = set(mp["stcode"])
+
+    fig = go.Figure()
+    # base layer: all 50 states in pale grey so the country outline is always visible
+    fig.add_trace(go.Choropleth(
+        locations=[s for s in ALL_STATES if s not in have],
+        z=[0] * len([s for s in ALL_STATES if s not in have]),
+        locationmode="USA-states", showscale=False,
+        colorscale=[[0, "#F0F2F0"], [1, "#F0F2F0"]],
+        marker_line_color="white", marker_line_width=1,
+        hovertemplate="<b>%{location}</b><br>No prepaid plan reporting<extra></extra>"))
+    # data layer: log-scaled color so small plans stay distinguishable from Florida
+    logv = np.log10(mp["val"].clip(lower=0.1))
+    tick_raw = [10, 100, 300, 1000, 3000, 10000]
+    tick_raw = [t for t in tick_raw if t <= mp["val"].max() * 1.2]
+    fig.add_trace(go.Choropleth(
+        locations=mp["stcode"], z=logv, locationmode="USA-states",
+        customdata=mp[["plans", "vstr"]].values,
+        colorscale=[[0, "#DCEBD2"], [0.5, "#6FB253"], [1, DARK]],
+        marker_line_color="white", marker_line_width=1,
+        colorbar=dict(title=dict(text=("Assets $M" if map_metric == "Assets" else "Accounts"),
+                                 font=dict(size=11)),
+                      tickvals=[np.log10(t) for t in tick_raw],
+                      ticktext=[f"{t:,}" for t in tick_raw],
+                      thickness=12, len=0.7, outlinewidth=0),
+        hovertemplate="<b>%{location}</b><br>%{customdata[0]}<br>" + map_metric + ": %{customdata[1]}<extra></extra>"))
+    fig.update_geos(scope="usa", bgcolor="rgba(0,0,0,0)", landcolor="#F0F2F0",
+                    subunitcolor="white", showlakes=False, showland=True,
+                    lataxis_showgrid=False, lonaxis_showgrid=False)
+    fig.update_layout(height=460, margin=dict(l=0, r=0, t=0, b=0), paper_bgcolor="white")
+    return fig, len(mp)
+
 # ----------------------------------------------------------------------------- shared views
-def render_reporting_depth(d, years):
-    """Field-completeness heatmap: how many of the six metrics each plan reported per year."""
-    st.caption("Each cell shows how many of the six tracked metrics a plan reported that year "
-               "(funded status, assets, active accounts, accounts since inception, and the two payout figures). "
-               "Darker means a fuller record. Blank means the year was not collected for that plan. "
-               "Hover for the detail; an ⚠ marks a figure carried forward or reported as of an earlier date.")
+@st.cache_data(show_spinner=False)
+def _reporting_depth_fig(d, years):
     keys = plan_order(d["plan_key"].unique())
     zmap, hover, marks = [], [], []
     idx = {(r["plan_key"], int(r["reporting_year"])): r for _, r in d.iterrows()}
@@ -516,15 +583,27 @@ def render_reporting_depth(d, years):
         hoverongaps=False))
     fig.update_layout(height=580, margin=dict(l=10, r=10, t=10, b=10),
                       yaxis=dict(autorange="reversed"), plot_bgcolor="white", paper_bgcolor="white")
-    st.plotly_chart(fig, width='stretch')
     depth = (d.set_index(["plan_key", "reporting_year"])[NUM_COLS].notna().sum(axis=1)
               .groupby(level=1).mean().round(1))
+    stats = (
+        f"{depth.loc[[y for y in depth.index if y <= 2015]].mean():.1f} of 6",
+        f"{depth.loc[[y for y in depth.index if 2016 <= y <= 2021]].mean():.1f} of 6" if any(2016 <= y <= 2021 for y in depth.index) else "—",
+        f"{depth.loc[[y for y in depth.index if y >= 2022]].mean():.1f} of 6" if any(y >= 2022 for y in depth.index) else "—",
+    )
+    return fig, stats
+
+def render_reporting_depth(d, years):
+    """Field-completeness heatmap: how many of the six metrics each plan reported per year."""
+    st.caption("Each cell shows how many of the six tracked metrics a plan reported that year "
+               "(funded status, assets, active accounts, accounts since inception, and the two payout figures). "
+               "Darker means a fuller record. Blank means the year was not collected for that plan. "
+               "Hover for the detail; an ⚠ marks a figure carried forward or reported as of an earlier date.")
+    fig, stats = _reporting_depth_fig(d, tuple(years))
+    st.plotly_chart(fig, width='stretch')
     ec = st.columns(3)
-    ec[0].metric("Avg metrics/plan, 2005–2015", f"{depth.loc[[y for y in depth.index if y <= 2015]].mean():.1f} of 6")
-    mid = [y for y in depth.index if 2016 <= y <= 2021]
-    ec[1].metric("Avg metrics/plan, 2018–2021", f"{depth.loc[mid].mean():.1f} of 6" if mid else "—")
-    era = [y for y in depth.index if y >= 2022]
-    ec[2].metric("Avg metrics/plan, 2022+", f"{depth.loc[era].mean():.1f} of 6" if era else "—")
+    ec[0].metric("Avg metrics/plan, 2005–2015", stats[0])
+    ec[1].metric("Avg metrics/plan, 2018–2021", stats[1])
+    ec[2].metric("Avg metrics/plan, 2022+", stats[2])
 
 # ----------------------------------------------------------------------------- header
 hc = st.columns([1, 3])
@@ -564,63 +643,27 @@ with tabs[0]:
 
     st.divider()
 
-    # --- industry trend charts ---
-    a_by_yr = d.groupby("reporting_year")["assets_m"].sum(min_count=1)
-    n_by_yr = d.groupby("reporting_year")["active_accounts"].sum(min_count=1)
+    # --- industry trend charts (cached) ---
+    fa, fn = _overview_trend_figs(d)
     g1, g2 = st.columns(2)
     with g1:
         st.markdown("###### Total reported prepaid assets")
-        f = go.Figure(go.Scatter(x=a_by_yr.index, y=a_by_yr.values/1000, mode="lines+markers",
-                      line=dict(color=GREEN, width=3), marker=dict(size=6, color=DARK),
-                      fill="tozeroy", fillcolor="rgba(58,137,22,0.10)",
-                      hovertemplate="%{x}: $%{y:.1f}B<extra></extra>"))
-        f.update_layout(height=260, margin=dict(l=6, r=6, t=6, b=6), plot_bgcolor="white",
-                        yaxis=dict(title="$B", ticksuffix="B"), showlegend=False)
-        st.plotly_chart(f, width='stretch')
+        st.plotly_chart(fa, width='stretch')
     with g2:
         st.markdown("###### Total active accounts")
-        f = go.Figure(go.Scatter(x=n_by_yr.index, y=n_by_yr.values, mode="lines+markers",
-                      line=dict(color=STEEL, width=3), marker=dict(size=6, color="#4c5d5d"),
-                      fill="tozeroy", fillcolor="rgba(112,134,134,0.12)",
-                      hovertemplate="%{x}: %{y:,.0f}<extra></extra>"))
-        f.update_layout(height=260, margin=dict(l=6, r=6, t=6, b=6), plot_bgcolor="white",
-                        yaxis=dict(tickformat=",.0f"), showlegend=False)
-        st.plotly_chart(f, width='stretch')
+        st.plotly_chart(fn, width='stretch')
     st.caption(f"Totals sum the plans that reported in each collection year. {min(years)}–{max(years)}; "
                "2016, 2017 and 2019 were not collected.")
 
     st.divider()
 
-    # --- US map ---
+    # --- US map (cached) ---
     st.markdown(f"###### Prepaid plans across the country, {latest}")
     map_metric = st.radio("Shade states by", ["Assets", "Active accounts"],
                           horizontal=True, label_visibility="collapsed")
-    col = "assets_m" if map_metric == "Assets" else "active_accounts"
-    dm = dl.copy()
-    dm["stcode"] = dm["plan_key"].map(lambda k: REG.get(k, [""])[0])
-    dm = dm[dm["stcode"] != "U.S."]
-    grp = dm.groupby("stcode")
-    val = grp[col].sum(min_count=1)
-    plans = grp["plan_key"].apply(lambda s: ", ".join(sorted(name_of(x) for x in s)))
-    mp = pd.DataFrame({"stcode": val.index, "val": val.values,
-                       "plans": [plans[s] for s in val.index]}).dropna(subset=["val"])
-    def _vs(v):
-        return (f"${v/1000:,.2f}B" if v >= 1000 else f"${v:,.0f}M") if map_metric == "Assets" else f"{v:,.0f}"
-    mp["vstr"] = mp["val"].apply(_vs)
-    fig = go.Figure(go.Choropleth(
-        locations=mp["stcode"], z=mp["val"], locationmode="USA-states",
-        customdata=mp[["plans", "vstr"]].values,
-        colorscale=[[0, "#EAF3E4"], [0.5, "#7BB661"], [1, DARK]],
-        marker_line_color="white", marker_line_width=1,
-        colorbar=dict(title=dict(text=("$M" if map_metric == "Assets" else "Accounts"), font=dict(size=11)),
-                      thickness=12, len=0.7, outlinewidth=0),
-        hovertemplate="<b>%{location}</b><br>%{customdata[0]}<br>" + map_metric + ": %{customdata[1]}<extra></extra>"))
-    fig.update_geos(scope="usa", bgcolor="rgba(0,0,0,0)", lakecolor="white",
-                    landcolor="#F4F6F4", subunitcolor="white")
-    fig.update_layout(height=440, margin=dict(l=0, r=0, t=0, b=0), paper_bgcolor="white",
-                      geo=dict(showlakes=False))
-    st.plotly_chart(fig, width='stretch')
-    st.caption(f"{len(mp)} states with a plan reporting in {latest}. Two-plan states (Texas, Michigan) are "
+    map_fig, n_states = _overview_map_fig(d, latest, map_metric)
+    st.plotly_chart(map_fig, width='stretch')
+    st.caption(f"{n_states} states with a plan reporting in {latest}. Two-plan states (Texas, Michigan) are "
                "summed. The national Private College 529 Plan is not mapped to a state.")
 
     missing_years = [y for y in range(min(years), max(years)+1) if y not in years]
@@ -661,7 +704,8 @@ with tabs[1]:
                           line=dict(color=GREEN, width=3), marker=dict(size=7, color=DARK)))
         yfmt = ".0%" if m == "funded" else ",.0f"
         fig.update_layout(title=METRICS[m][0], height=260, margin=dict(l=8, r=8, t=34, b=8),
-                          plot_bgcolor="white", yaxis=dict(tickformat=yfmt), showlegend=False)
+                          plot_bgcolor="white", yaxis=dict(tickformat=yfmt), showlegend=False,
+                          xaxis=dict(dtick=5, tick0=2005, range=[2004, 2026]))
         mcols[i].plotly_chart(fig, width='stretch')
 
     show = sub[["reporting_year","as_of","funded","assets_m","active_accounts",
@@ -749,7 +793,8 @@ with tabs[3]:
     else:
         yaxis = dict(tickformat=".0%" if kind == "pct" else ",.0f")
     fig.update_layout(height=520, margin=dict(l=8, r=8, t=10, b=8), plot_bgcolor="white",
-                      yaxis=yaxis, legend=dict(orientation="h", yanchor="bottom", y=1.02))
+                      yaxis=yaxis, xaxis=dict(dtick=5, tick0=2005, range=[2004, 2026]),
+                      legend=dict(orientation="h", yanchor="bottom", y=1.02))
     st.plotly_chart(fig, width='stretch')
 
 # =========================================================== COMMITTEE ERA (2022+)
