@@ -52,12 +52,12 @@ streamlit run streamlit_app.py
 
 | Tab | What it does |
 |---|---|
-| **Overview** | Headline totals and a plan-by-year coverage heatmap. Green reported, amber carried-forward or lagged as-of, blank not collected. |
+| **Overview** | Headline totals, industry trend charts (assets and accounts over time), and a US map of prepaid plans by state. |
 | **Plan Profile** | One plan: attribute cards, funded / assets / accounts history, and a full table with as-of dates and notes. |
 | **Compare** | Sortable multi-plan comparison on any metric, any year. |
-| **Trends** | Any metric across years, several plans overlaid. |
+| **Trends** | Any metric across years, several plans overlaid, with absolute / log / indexed scales so large plans like Florida don't flatten the rest. |
 | **Committee Era (2022+)** | The years carrying the full detail set. Single-year detail, actuarial assumptions across years, and a metric matrix. |
-| **Data Quality** | Completeness by metric, flags to review, and interior missing plan-years. |
+| **Data Quality** | Reporting-depth heatmap (how complete each plan-year is), completeness by metric, flags to review, and interior missing plan-years. |
 | **Upload & Append** | Add a new year from a committee Excel file. |
 | **Exports** | Committee-format workbooks, the analytical master, and filtered CSV. |
 
