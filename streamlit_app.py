@@ -617,7 +617,7 @@ with hc[1]:
         unsafe_allow_html=True)
 
 tabs = st.tabs(["Overview", "Plan Profile", "Compare", "Trends", "Committee Era (2022+)",
-                "Data Quality", "Upload & Append", "Exports"])
+                "Data Quality", "Exports"])
 
 # =========================================================== OVERVIEW
 with tabs[0]:
@@ -670,7 +670,7 @@ with tabs[0]:
     if missing_years:
         st.info("Years not yet collected anywhere in the record: "
                 + ", ".join(str(y) for y in missing_years)
-                + ".  Add them any time from the Upload & Append tab.")
+                + ".")
 
 # =========================================================== PLAN PROFILE
 with tabs[1]:
@@ -807,7 +807,7 @@ with tabs[4]:
                "that the earlier record does not. Everything in this tab is drawn from those complete years.")
 
     if not era_years:
-        st.info("No 2022-or-later years in the record yet. Add one from Upload & Append.")
+        st.info("No 2022-or-later years in the record yet.")
     else:
         view = st.radio("View", ["Single-year detail", "Assumptions across years", "Metric matrix"],
                         horizontal=True)
@@ -919,75 +919,8 @@ with tabs[5]:
         st.dataframe(pd.DataFrame(miss, columns=["Plan", "Missing year"]),
                      width='stretch', hide_index=True)
 
-# =========================================================== UPLOAD & APPEND
-with tabs[6]:
-    st.markdown("#### Add a new year")
-    st.caption("Upload a standard Prepaid Committee Excel file. The parser reads columns by "
-               "their headers, so both the older (2022–23) and newer (2024–25) layouts work. "
-               "Michigan MET I/MET II and Mississippi tiers are split automatically.")
-
-    tc = st.columns([1, 1, 2])
-    up_year = tc[0].number_input("Reporting year for this file", min_value=2000, max_value=2100,
-                                 value=datetime.now().year, step=1)
-    st.download_button("Download blank template", template_bytes(),
-                       file_name="Prepaid_Committee_Template.xlsx", key="tmpl")
-
-    upfile = st.file_uploader("Committee Excel (.xlsx)", type=["xlsx"])
-    if upfile is not None:
-        try:
-            recs, warns, up_attrs = parse_committee_file(upfile, int(up_year))
-            new = enrich(recs, int(up_year), f"Committee upload (FY{int(up_year)})")
-            st.success(f"Parsed {len(new)} plan rows for {int(up_year)}.")
-            for w in warns: st.warning(w)
-
-            existing_keys = set(df()[df()["reporting_year"] == int(up_year)]["plan_key"])
-            conflicts = [name_of(k) for k in new["plan_key"] if k in existing_keys]
-            prev = new[["state","plan_name","funded","assets_m","active_accounts",
-                        "accounts_since_inception","paid_out_fy_m","paid_out_inception_m","as_of","note"]].copy()
-            prev["funded"] = prev["funded"].apply(lambda v: fmt(v, "pct"))
-            st.dataframe(prev, width='stretch', hide_index=True)
-
-            if conflicts:
-                st.warning(f"{int(up_year)} already has data for: {', '.join(conflicts)}.")
-            mode = st.radio("If the year already exists:",
-                            ["Overwrite existing rows for this year", "Skip plans already present"],
-                            horizontal=True)
-            if st.button("Merge into session", type="primary"):
-                base = df().copy()
-                if mode.startswith("Overwrite"):
-                    base = base[~((base["reporting_year"] == int(up_year)) &
-                                  (base["plan_key"].isin(new["plan_key"])))]
-                    add = new
-                else:
-                    add = new[~new["plan_key"].isin(existing_keys)]
-                st.session_state.df = pd.concat([base, add], ignore_index=True)
-                st.session_state.attrs_by_year[str(int(up_year))] = up_attrs
-                st.success(f"Merged. The record now holds {st.session_state.df['reporting_year'].nunique()} years "
-                           f"and {len(st.session_state.df)} rows. Download the new master below to commit it.")
-        except Exception as e:
-            st.error(f"Could not parse this file: {e}")
-
-    st.divider()
-    st.markdown("#### Save the new year permanently")
-    st.info("Two files make up the record. Download **both** and commit them, or the new year's "
-            "actuarial assumptions and descriptive columns will be lost on the next reboot.", icon="💾")
-    dl = st.columns(2)
-    dl[0].download_button("1. prepaid_master.csv  (the figures)",
-                          df().to_csv(index=False).encode(),
-                          file_name="prepaid_master.csv", type="primary")
-    dl[1].download_button("2. prepaid_attrs_by_year.json  (assumptions + attributes)",
-                          json.dumps(st.session_state.attrs_by_year, ensure_ascii=False, indent=0).encode(),
-                          file_name="prepaid_attrs_by_year.json", type="primary")
-    st.caption("Replace `data/prepaid_master.csv` and `data/prepaid_attrs_by_year.json` in the repo, "
-               "then commit and push. Streamlit Cloud redeploys automatically.")
-
-    st.divider()
-    st.markdown("#### Other downloads")
-    st.download_button("Consolidated analytical workbook (Excel)", build_workbook(df()),
-                       file_name=f"CSPN_Prepaid_Consolidated_{min(df()['reporting_year'])}-{max(df()['reporting_year'])}.xlsx")
-
 # =========================================================== EXPORTS
-with tabs[7]:
+with tabs[6]:
     d = df()
     years = sorted(d["reporting_year"].unique())
     aby = st.session_state.attrs_by_year

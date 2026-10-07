@@ -58,24 +58,22 @@ streamlit run streamlit_app.py
 | **Trends** | Any metric across years, several plans overlaid, with absolute / log / indexed scales so large plans like Florida don't flatten the rest. |
 | **Committee Era (2022+)** | The years carrying the full detail set. Single-year detail, actuarial assumptions across years, and a metric matrix. |
 | **Data Quality** | Reporting-depth heatmap (how complete each plan-year is), completeness by metric, flags to review, and interior missing plan-years. |
-| **Upload & Append** | Add a new year from a committee Excel file. |
 | **Exports** | Committee-format workbooks, the analytical master, and filtered CSV. |
 
-## Adding a new year (or the missing 2016 / 2017 / 2019)
+## Adding a new year (maintainer only)
 
-1. Open **Upload & Append**, set the reporting year, and upload the committee Excel file.
-   Both the older (2022–23) and newer (2024–25) column layouts are handled; Michigan
-   MET I/II and Mississippi tiers split automatically. A blank template is downloadable
-   there if you want submissions in a fixed shape.
-2. Review the parsed preview. Choose overwrite or skip if the year already exists, then merge.
-3. Download **both** files the tab offers and commit them:
-   - `prepaid_master.csv` → `data/prepaid_master.csv` (the figures)
-   - `prepaid_attrs_by_year.json` → `data/prepaid_attrs_by_year.json` (that year's actuarial
-     assumptions, benefit structure, and tax columns)
+The in-app upload tab has been removed so that viewers cannot change the data. Adding a
+year is now a maintainer step, run locally and committed to the repo:
 
-That commit is what makes the year permanent. Streamlit Community Cloud does not persist
-in-app writes, so the files in `data/` are the source of truth. Committing only the CSV
-keeps the numbers but loses the new year's descriptive columns.
+```bash
+python add_year.py path/to/CSPN_Prepaid_Committee_Fall_2026.xlsx 2026
+```
+
+It parses the committee Excel (older 2022-23 and newer 2024-25 layouts both work; Michigan
+MET I/II and Mississippi tiers split automatically), merges it into
+`data/prepaid_master.csv` (replacing that year if already present), and updates
+`data/prepaid_attrs_by_year.json`. Review the diff, then commit both files and push.
+The same path adds the missing 2016 / 2017 / 2019 years whenever those collections turn up.
 
 ## Exports
 
